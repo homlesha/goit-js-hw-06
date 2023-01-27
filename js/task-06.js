@@ -5,6 +5,10 @@
     const dataLength = this.dataset.length;
     const currentLength = this.value.length;
     if(currentLength == dataLength) {
-        this.className = 'valid'
-    }else (this.className = 'invalid')
-  }
+        this.classList.add('valid') 
+        this.classList.remove('invalid') 
+    }else (
+      this.classList.add('invalid'),
+      this.classList.remove('valid')
+    );
+  };

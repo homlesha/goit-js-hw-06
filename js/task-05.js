@@ -1,11 +1,11 @@
 const input = document.getElementById('name-input');
 const span = document.getElementById('name-output');  
   
-input.addEventListener('input', inputName);
+input.addEventListener('input', inputHandler);
   
-  function inputName() {
+  function inputHandler() {
     if (this.value === '') {
-        span.textContent = 'Anonymous'
+      return span.textContent = 'Anonymous'
     }
     span.textContent = this.value;
   };
